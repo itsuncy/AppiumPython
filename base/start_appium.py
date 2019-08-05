@@ -3,17 +3,14 @@ import sys
 sys.path.append('D:\PythonSpace\AppiumPython')
 from time import sleep
 from appium import webdriver
-from read_ini import ReadIni
-from get_by_local import GetByLocal
-from bussiness.login_bussiness import LoginBussiness
 
 
 # 启动APP
-def get_driver():
+def start():
     Capabilities = {
         "platformName": "Android",
         "deviceName": "127.0.0.1:62001",
-        "app": "D:\\Android-SDK-Windows\\app\\58Coin.apk",
+        "app": "D:/CoreRepository/Python/AppiumPython/app/58Coin.apk",
         "noReset": "true"
         # "appwaitActivity":"com.tbex.trader.module.launch.SplashActivity"
     }
@@ -130,7 +127,6 @@ def login():
 def contract():
     driver.find_element_by_id("com.tbex.trader:id/centerTabView").click()
     driver.find_element_by_id('com.tbex.trader:id/rbUsdt').click()
-
 
 # driver = get_driver()
 # sleep(1)

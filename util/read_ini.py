@@ -1,11 +1,11 @@
 import configparser
 
+
 class ReadIni:
-    def __init__(self, file_path=None):
-        if file_path == None:
-            self.file_path = 'D:\PythonSpace\AppiumPython\config\LocalElement.ini'
-        else:
-            self.file_path = file_path
+    def __init__(self, file_name):
+
+        self.file_path = 'D:\\CoreRepository\\Python\\AppiumPython\\resources\\element\\' + file_name + ".ini"
+
         self.data = self.read_ini()
 
     # 读取ini配置文件
@@ -17,13 +17,14 @@ class ReadIni:
     # 通过key获取对应的value
     def get_value(self, key, section=None):
         if section == None:
-            section = "login_element"
+            section = "default_element"
         try:
             value = self.data.get(section, key)
         except:
             value = None
         return value
 
+
 if __name__ == '__main__':
-    read_ini = ReadIni()
-    print(read_ini.get_value("username", "course_element"))
+    a = ReadIni("MineElement").get_value("mine", "default_element")
+    print(a)

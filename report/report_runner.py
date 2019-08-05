@@ -1,4 +1,4 @@
-import HTMLTestRunner
+from lib.HTMLTestRunner import HTMLTestRunner
 import os
 import time
 
@@ -17,6 +17,11 @@ def file_name():
 
 def report_runner(suite, description):
     fp = open(file_name(), 'wb')
-    runner = HTMLTestRunner.HTMLTestRunner(stream=fp, tester='孙承玉', title='Android自动化测试报告', description=description)
+    runner = HTMLTestRunner(stream=fp, tester='孙承玉', title='Android自动化测试报告', description=description)
     runner.run(suite)
     fp.close()
+
+
+# print(reports_path())
+# print(get_time())
+# print(file_name())

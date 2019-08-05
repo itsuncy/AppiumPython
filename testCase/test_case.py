@@ -2,7 +2,7 @@ import unittest
 from report.report_runner import report_runner
 
 
-class CaseTest(unittest.TestCase):
+class TestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -35,7 +35,7 @@ class CaseTest(unittest.TestCase):
 if __name__ == '__main__':
     # unittest.main()
     suite = unittest.TestSuite()
-    suite.addTest(CaseTest("test_01"))
-    suite.addTest(CaseTest("test_02"))
-    suite.addTest(CaseTest("test_03"))
+    suite.addTest(TestCase("test_01"))
+    suite.addTest(TestCase("test_02"))
+    suite.addTest(TestCase("test_03"))
     report_runner(suite, "58Coin登录模块测试")

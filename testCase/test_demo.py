@@ -1,7 +1,5 @@
-import sys
-
-sys.path.append('D:\CoreRepository\Python\AppiumPython')
 import unittest
+from report.report_runner import report_runner
 from report.report_runner import file_name
 from lib.HTMLTestRunner import HTMLTestRunner
 
@@ -42,10 +40,9 @@ if __name__ == '__main__':
     suite.addTest(TestDemo("test_01"))
     suite.addTest(TestDemo("test_02"))
     suite.addTest(TestDemo("test_03"))
+    # report_runner(suite, "58Coin登录模块测试")
 
     fp = open(file_name(), 'wb')
-    runner = HTMLTestRunner(stream=fp, tester='孙承玉', title='Android自动化测试报告', description=description)
+    runner = HTMLTestRunner(stream=fp, tester='孙承玉', title='Android自动化测试报告', description=None)
     runner.run(suite)
     fp.close()
-
-    # report_runner(suite, "58Coin登录模块测试")

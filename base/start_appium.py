@@ -7,10 +7,17 @@ from appium import webdriver
 # 启动Appium服务
 
 def start():
+    # Capabilities = {
+    #     "platformName": "Android",
+    #     "deviceName": "127.0.0.1:62001",
+    #     "app": "D:/CoreRepository/Python/AppiumPython/app/58Coin.apk",
+    #     "noReset": "true"
+    #     # "appwaitActivity":"com.tbex.trader.module.launch.SplashActivity"
+    # }
     Capabilities = {
         "platformName": "Android",
         "deviceName": "127.0.0.1:62001",
-        "app": "D:/CoreRepository/Python/AppiumPython/app/58Coin.apk",
+        "app": "D:/CoreRepository/Python/AppiumPython/app/58Coin_Test.apk",
         "noReset": "true"
         # "appwaitActivity":"com.tbex.trader.module.launch.SplashActivity"
     }

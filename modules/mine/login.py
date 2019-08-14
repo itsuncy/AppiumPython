@@ -12,5 +12,5 @@ class Login:
         self.mine_handle.send_password(password)
         self.mine_handle.click_login_button()
 
-
-    # def login_out(self):
+    def logout(self):
+        self.mine_handle.click_mine()

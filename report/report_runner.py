@@ -8,7 +8,7 @@ def reports_path():
 
 
 def get_time():
-    return time.strftime('\%Y-%m-%d_%H%M%S')
+    return time.strftime('/%Y-%m-%d_%H%M%S')
 
 
 def file_name():
